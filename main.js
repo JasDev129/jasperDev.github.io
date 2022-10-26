@@ -1,22 +1,25 @@
 // HAMBURGER_MENU
 let navStatus = false;
 const navList = document.querySelector(".nav-list");
+let mediaQuery = window.matchMedia("(min-width: 760px)");
 let navHide = (navList.style.left = "-100%");
+
+
     const navToggle = document.querySelector('.menu').addEventListener('click', (menu) =>
     {
-        switch (navStatus){
-
+     
+          switch (navStatus) {
             case false:
-                navList.style.left = "0";
+                navList.style.left = "0";        
                 navStatus = true;
-                break;
-                
+              break;
+
             case true:
-                navList.style.left = "-100%";
-                navStatus = false;
-                break;
-        
-        } 
+              navList.style.left = "-100%";
+              navStatus = false;
+              break;
+          }
+    
     });
 
 // DARK_MODE
