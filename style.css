@@ -7,10 +7,8 @@
 */
 :root{
     --primaryColor: #eeee;
-    --secondaryColor: #4070F4;
-    --accentColor: #0E2431;
-    --textColor: #333333;
-    --lightBg: #E2E5EE; 
+    --secondaryColor: #333333;
+    --accentColor:#4070F4; ; 
 }
 *{
     margin: 0;
@@ -19,7 +17,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .main{
-    background-color: var(--lightBg);
+    background-color: var(--primaryColor);
     transition: .50s linear;
 }
 
@@ -41,11 +39,11 @@
 .logo{
   display: flex;
   justify-content: center;
-  color: var(--textColor);
+  color: var(--accentColor);
 }
 .logo span{
     font-size: 1rem;
-    color: var(--accentColor);
+    color: var(--secondaryColor);
 }
 .nav-list{
     display: block;
@@ -63,50 +61,57 @@
 }
 .nav-link a{
     text-decoration: none;
-    color: var(--textColor);
+    color: var(--secondaryColor);
     font-weight: 600;
 }
 .nav-link a:hover{
-    color: var(--textColor);
+    color: var(--secondaryColor);
 }
 .nav-link:hover{
     background: linear-gradient(to right, rgba(0, 0, 0, .10), rgba(0, 0, 0, .25));
     padding-left: 1rem;
     font-size: 1.1rem;
 }
-.dark-mode{
+#dark-mode{
     position: absolute;
     top: 25%;
     right: 5%;
     width: 40px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid var(--secondaryColor);
     border-radius: 20px;
     display: flex;
     align-items: center;
     padding: 0 10px;
     cursor: pointer;
-   
+   overflow: hidden;
 }
 .bg-dark{
     position: relative;
-    left: 15%;
+    left: 16%;
     top: 0;
     transition: .50s linear;
+    
 }
 .bg-light{
     position: relative;
-    left: 0;
+    left: 120%;
     top: 0;
     transition: .50s linear;
+    color: var(--secondaryColor);
 }
 .nav-toggle{
     position: absolute;
     top: 35%;
     left: 5%;
 }
+.dark-theme{
+    --primaryColor: #333333;
+    --secondaryColor: #eeee;
+    --accentColor:#4070F4; ; 
+}
 .menu{
     cursor: pointer;
     font-size: 1.3rem;
-    color: var(--textColor);
+    color: var(--secondaryColor);
 }
