@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,900;1,100&family=Poppins:ital,wght@0,100;0,400;0,600;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,900;1,100&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,900;1,100&display=swap');
 /* 
 
     font-family: 'Montserrat', sans-serif;
@@ -144,14 +144,16 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     flex-direction: column;
 }
 .profile{
-    width: 250px;
+    width: 200px;
     height: 250px;
-    margin-top: 6rem;
+    margin-top: 1rem;
+    filter: drop-shadow(0px 0px 1px var(--secondaryColor));
 }
 .hero-h{
-     text-align: center;
+    text-align: center;
     margin: 10px 0;
     color: var(--secondaryColor);
+    font-weight: 600;
 }
 .hero-p{
     text-align: center;
