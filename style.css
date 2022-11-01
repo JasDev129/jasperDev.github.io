@@ -20,12 +20,13 @@
 }
 .main{
     background-color: var(--primaryColor);
-    transition: .50s linear;
+    transition: all .50s linear;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Header */
-p, ul, li, a, h1, h2, h3 ,h4, h5{
+p, ul, li, a, h1, h2, h3 ,h4, h5, span{
     color: var(--secondaryColor);
 }
 .header{
@@ -198,7 +199,12 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
    height: 250px;
    
 }
-
+.about-me-first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .about-me{
     display: flex;
     justify-content: center;
@@ -292,6 +298,8 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
 }
 .skills img:hover{
     transform: scale(1.5);
+    filter: drop-shadow(0 0 1px var(--accentColor));
+    cursor: pointer;
 }
 .others img:nth-child(1){
     width: 50px;
@@ -320,6 +328,10 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+}
+.project-title h1{
+    font-size: 3rem;
+    font-weight: 500;
 }
 .card{
     width: 300px;
@@ -377,7 +389,7 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     color: var(--accentColor);
    
 }
-.footer{
+#footer{
     width: 100vw;
     min-height: 250px;
     display: flex;
@@ -421,6 +433,67 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
 }
 /* MOBILE LANDSCAPE */
 @media screen and (min-width:576px) {
+    
+
+    #hero-section{
+    
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        place-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .profile-img{
+        grid-column: 7 / span 4;
+        grid-row: 3 / span 3;
+        position: absolute;
+    }
+
+    .hero-h{
+
+        grid-column: 3 / span 3;
+        grid-row: 3;
+    }
+    .call-to-action{
+
+        grid-column: 3 / span 3;
+        grid-row: 4 / span 2;
+    }
+
+    .abm-skills{
+
+        width: 100%;
+
+    }
+    .abm-skills-card{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    /* PROJECTS */
+
+    .projects{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 1rem;
+    }
+    
+    #footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
     #dark-mode{
        right: 0;
     }
@@ -464,52 +537,80 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     .menu{
         display: none;
     }
-
-    #hero-section{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        place-items: center;
-    }
     .profile-img{
-        grid-column: 7 / span 4;
-        grid-row: 3 / span 3;
+        grid-column: 8 / span 3;
+        grid-row: 3 / span 2;
+    }
+    
+    .profile{
+        width: 300px;
+        height: 350px;
     }
 
     .hero-h{
-
+        font-size: 2rem;
         grid-column: 3 / span 3;
-        grid-row: 3;
+        grid-row: 3 / span 2;
     }
     .call-to-action{
 
         grid-column: 3 / span 3;
-        grid-row: 4 / span 2;
+        grid-row: 5 ;
     }
+
 
     .abm-skills-card{
         display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
+        width: 100%;
         align-items: flex-start;
         justify-content: space-evenly;
     }
-    /* PROJECTS */
 
-    .projects{
-        width: 100%;
+    #footer{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 2rem;
-        padding: 0 1rem;
+        justify-content: space-evenly;
+        align-items: center;
     }
-    
-    .footer{
+}
+
+@media screen and (min-width: 1024px) {
+    .profile-img{
+        width: 400px;
+        height: 400px;
         display: flex;
-        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile-img img{
+            width: 350;
+            height: 400px;
+    }
+    .hero-h span:nth-child(1){
+        font-size: 2.5rem;
+    }
+    .about-me-first{
+        display: flex;
         justify-content: center;
         align-items: center;
+        margin: 2.5rem 0;
+    }
+    .abm-skills{
+        margin-bottom: 2.5rem;
+    }
+    .aboutme-img img{
+        width: 500px;
+        height: 500px;
+    }
+    .abm-para{
+        padding: 0 2rem;
+    }
+    .abm-para p{
+        font-size: 1.5rem;
+        line-height: 50px;
+    }
+    
+    .projects{
+        margin: 5rem 0;
     }
 }
