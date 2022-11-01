@@ -445,6 +445,19 @@ p, ul, li, a, h1, h2, h3 ,h4, h5, span{
         top: 0;
         left: 0;
     }
+    #hero-section::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: linear-gradient(to top, var(--primaryColor), var(--secondaryColor));
+        opacity: .2;
+        background-position: center;
+        background-size: cover;
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    }
     .profile-img{
         grid-column: 7 / span 4;
         grid-row: 3 / span 3;
