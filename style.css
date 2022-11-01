@@ -153,7 +153,7 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     background-color: #4070F4;
     border-radius: 50% 50% 50% 50% / 36% 35% 65% 64%;
     margin-top: 1rem;
-    border: 1px solid #94e6ff;
+    border: 1px solid #94e6ff89;
     box-shadow: 0 0 5px 0 var(--secondaryColor);
     overflow: hidden;
 }
@@ -256,26 +256,37 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     align-items: center;
     gap: 1rem;
 }
+.skills span{
+    align-self: flex-start;
+    padding: 1rem 0 0 0;
+    opacity: .50;
+}
 .skills img{
     transition: .50s ease-in-out;
 }
-.skills img:nth-child(1){
+.skill-card-body img:nth-child(1){
     width: 80px;
     height: 80px;
 }
-.skills img:nth-child(2){
+.skill-card-body img:nth-child(2){
     width: 70px;
     height: 70px;
 }
-.skills img:nth-child(3){
+.skill-card-body img:nth-child(3){
     width: 70px;
     height: 70px;
 }
-.skills img:nth-child(4){
+.new-skills{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.new-skills img:nth-child(1){
     width: 70px;
     height: 70px;
 }
-.skills img:nth-child(5){
+.new-skills img:nth-child(2){
     width: 50px;
     height: 50px;
 }
@@ -408,6 +419,7 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
 .footer-socials a:hover{
    color: var(--secondaryColor);
 }
+/* MOBILE LANDSCAPE */
 @media screen and (min-width:576px) {
     #dark-mode{
        right: 0;
@@ -451,5 +463,53 @@ p, ul, li, a, h1, h2, h3 ,h4, h5{
     }
     .menu{
         display: none;
+    }
+
+    #hero-section{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        place-items: center;
+    }
+    .profile-img{
+        grid-column: 7 / span 4;
+        grid-row: 3 / span 3;
+    }
+
+    .hero-h{
+
+        grid-column: 3 / span 3;
+        grid-row: 3;
+    }
+    .call-to-action{
+
+        grid-column: 3 / span 3;
+        grid-row: 4 / span 2;
+    }
+
+    .abm-skills-card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    /* PROJECTS */
+
+    .projects{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }
